@@ -1,17 +1,23 @@
-# Use an official Node runtime as a parent image
-FROM node:14-alpine
+# Use a Node.js image as the base image
+FROM node:14
 
-# Set the working directory in the container to /app
+# Set the working directory
 WORKDIR /app
 
-# Add the current directory contents into the container at /app
-ADD . /app
+# Copy package.json and package-lock.json files
+COPY package*.json ./
 
-# Install any needed packages specified in package.json
+# Install dependencies
 RUN npm install
 
-# Make port 3000 available to the world outside this container
+# If you want to install `react-router-dom` specifically, you can add this line:
+RUN npm install react-router-dom
+
+# Bundle the app source inside Docker
+COPY . .
+
+# Expose the port the app runs on
 EXPOSE 3000
 
-# Run the application when the container launches
+# Start the app
 CMD ["npm", "start"]
