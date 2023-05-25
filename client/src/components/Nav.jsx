@@ -9,8 +9,10 @@ const Nav = ({ path }) => {
     <nav className="nav__container">
       <button className="button" onClick={() => navigate('/')}>Home</button>
       
+      
       {!excludedPaths.includes(path) && (
         <>
+            <button className="button" onClick={() => navigate('/exercises')}>Exercises</button>
             <button className="button" onClick={() => navigate('/login')}>Sign in</button>
             <button className="button__signup" onClick={() => navigate('/sign_up')}>Sign up</button>
         </>

@@ -1,3 +1,3 @@
 # Workout-App
 
-Initialized the project structure to run on 'localhost' with docker
+Using https://api-ninjas.com/api/exercises API for the list of exercises.

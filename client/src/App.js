@@ -2,8 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './components/Home';
 import Nav from './components/Nav';
-import Signup from './components/Signup';
-import Login from './components/Login';
+import Signup from './components/SignUp';
+import Login from './components/SignIn';
+import Exercises from './components/Exercises';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const AppContent = () => {
         <Route path="/" element={<Home />} />
         <Route path="/sign_up" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/exercises" element={<Exercises />} />
       </Routes>
     </>
   );
