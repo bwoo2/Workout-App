@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 import Signup from './components/SignUp';
 import Login from './components/SignIn';
 import Exercises from './components/Exercises';
+import Calorie from './components/Calorie';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const AppContent = () => {
         <Route path="/sign_up" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/exercises" element={<Exercises />} />
+        <Route path="/calorie" element={<Calorie />} />
       </Routes>
     </>
   );
