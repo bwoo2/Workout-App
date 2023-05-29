@@ -13,6 +13,7 @@ const Nav = ({ path }) => {
         <>
             <button className="button" onClick={() => navigate('/exercises')}>Exercises</button>
             <button className="button" onClick={() => navigate('/calorie')}>Calorie</button>
+            <button className="button" onClick={() => navigate('/recipes')}>Recipes</button>
             <button className="button" onClick={() => navigate('/login')}>Sign in</button>
             <button className="button__signup" onClick={() => navigate('/sign_up')}>Sign up</button>
         </>

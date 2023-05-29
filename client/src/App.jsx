@@ -6,6 +6,7 @@ import Signup from './components/SignUp';
 import Login from './components/SignIn';
 import Exercises from './components/Exercises';
 import Calorie from './components/Calorie';
+import Recipes from './components/Recipes';
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const AppContent = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/exercises" element={<Exercises />} />
         <Route path="/calorie" element={<Calorie />} />
+        <Route path="/recipes" element={<Recipes />} />
       </Routes>
     </>
   );

@@ -199,3 +199,9 @@ body {
     overflow-y: auto;
 }
 
+/* ========================== RECIPES ========================== */
+
+.food__image {
+    display: block;
+    margin: auto;
+}
