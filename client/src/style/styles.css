@@ -205,3 +205,7 @@ body {
     display: block;
     margin: auto;
 }
+
+.answer {
+    text-align: center;
+}
