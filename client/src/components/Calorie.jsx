@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../style/styles.css'
 
 const CalorieCounter = () => {
+    const [loading, setLoading] = useState(false);
     const [calorieData, setCalorieData] = useState(null);
     const [age, setAge] = useState('');
     const [gender, setGender] = useState('');
@@ -10,6 +11,7 @@ const CalorieCounter = () => {
     const [activityLevel, setActivityLevel] = useState('');
 
     const fetchData = () => {
+        setLoading(true);
         fetch('/api/calorie_intake', {
             method: 'POST',
             headers: {
@@ -29,8 +31,10 @@ const CalorieCounter = () => {
             return response.json();
         }).then(data => {
             setCalorieData(data);
+            setLoading(false);
         }).catch(error => {
             console.error('Error:', error);
+            setLoading(false);
         });
     }
 

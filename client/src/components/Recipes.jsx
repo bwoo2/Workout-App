@@ -2,24 +2,9 @@ import React, { useState } from 'react';
 import '../style/styles.css';
 
 const Recipe = () => {
+    const [loading, setLoading] = useState(false);
     const [answer, setAnswer] = useState(null);
     const [question, setQuestion] = useState('');
-
-    const fetchAnswer = () => {
-        const encodedQuestion = encodeURIComponent(question);
-
-        fetch(`https://webknox-recipes.p.rapidapi.com/recipes/quickAnswer?q=${encodedQuestion}`, {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': process.env.REACT_APP_QUESTION_API_KEY,
-                'X-RapidAPI-Host': 'webknox-recipes.p.rapidapi.com'
-            }
-        })
-        .then(response => response.json())
-        .then(data => setAnswer(data))
-        .catch(error => console.error('Error:', error));
-    }
-
     const [query, setQuery] = useState('');
     const [cuisine, setCuisine] = useState('');
     const [excludeCuisine, setExcludeCuisine] = useState('');
@@ -27,38 +12,58 @@ const Recipe = () => {
     const [intolerances, setIntolerances] = useState('');
     const [recipes, setRecipes] = useState('');
 
-    const fetchRecipes = () => {
-        const url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=${query}&cuisine=${cuisine}&excludeCuisine=${excludeCuisine}&diet=${diet}&intolerances=${intolerances}`;
-        
-        fetch(url, {
-            method: 'GET',
+    const fetchAnswer = () => {
+        fetch('/api/question', {
+            method: 'POST',
             headers: {
-                'X-RapidAPI-Key': process.env.REACT_APP_SPOONACULAR_API_KEY,
-                'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                question: question,
+            }),
+        }).then(response => {
+            if (!response.ok) {
+                throw new Error(response.status + ': ' + response.statusText);
             }
-        })
-        .then(response => response.json())
-        .then(data => {
-            const recipePromises = data.results.map(recipe =>
-                fetch(`https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/${recipe.id}/information`, {
-                    method: 'GET',
-                    headers: {
-                        'X-RapidAPI-Key': process.env.REACT_APP_SPOONACULAR_API_KEY,
-                        'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
-                    }
-                }).then(res => res.json())
-            );
-    
-            return Promise.all(recipePromises);
-        })
-        .then(recipeDetails => {
-            setRecipes(recipeDetails);
-        })
-        .catch(error => console.error('Error:', error));
+            return response.json();
+        }).then(data => {
+            setAnswer(data);
+        }).catch(error => {
+            console.error('Error:', error);
+        });
     }
-    
 
-    console.log(recipes);
+    const fetchRecipes = () => {
+        setLoading(true);
+        fetch('/api/recipes', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                query: query,
+                cuisine: cuisine,
+                excludeCuisine: excludeCuisine,
+                diet: diet,
+                intolerances: intolerances,
+            }),
+        }).then(response => {
+            if (!response.ok) {
+                throw new Error(response.status + ': ' + response.statusText);
+            }
+            return response.json();
+        }).then(data => {
+            setRecipes(data);
+            setLoading(false);
+        }).catch(error => {
+            console.error('Error:', error);
+            setLoading(false);
+        });
+    }
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
 
     return (
         <div>
@@ -76,7 +81,7 @@ const Recipe = () => {
 
             {recipes && recipes.map(recipe => (
                 <div key={recipe.id}>
-                    <img src={recipe.image} className='recipe__food__image' />
+                    <img src={recipe.image} className='recipe__food__image' alt='food'/>
                     <strong>{recipe.title}</strong>
                     <div dangerouslySetInnerHTML={{ __html: recipe.summary }} />
                 </div>
@@ -89,7 +94,7 @@ const Recipe = () => {
                 <input type="text" value={question} onChange={e => setQuestion(e.target.value)} placeholder="Ask a question" required />
                 <button type="submit">Ask</button>
             </form>
-            {answer &&  <p className='answer'> <img src={answer.image} className='food__image' />  <br /> {answer.answer} </p> }
+            {answer &&  <p className='answer'> <img src={answer.image} className='food__image' alt='food'/>  <br /> {answer.answer} </p> }
 
         </div>
     );
