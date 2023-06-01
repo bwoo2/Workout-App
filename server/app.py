@@ -1,16 +1,20 @@
-from flask import Flask, send_from_directory
-from flask import Flask
-import os
+from flask import Flask, jsonify, abort
+import requests
 
-app = Flask(__name__, static_folder='../client/build', static_url_path='/')
+app = Flask(__name__)
 
-@app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
-def serve(path):
-    if path != "" and os.path.exists(app.static_folder + '/' + path):
-        return send_from_directory(app.static_folder, path)
+@app.route('/api/exercise', methods=['GET'])
+def api_default():
+    return api('abdominals')
+
+@app.route('/api/exercise/<string:muscle>', methods=['GET'])
+def api(muscle):
+    api_url = 'https://api.api-ninjas.com/v1/exercises?muscle={}'.format(muscle)
+    response = requests.get(api_url, headers={'X-Api-Key': 'rELKXxb6KJx0VU3IE+kXTQ==vOW8K8KvgJDI8wPb'})
+    if response.status_code == 200:
+        return jsonify(response.json())
     else:
-        return send_from_directory(app.static_folder, 'index.html')
+        return abort(response.status_code, response.text)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')

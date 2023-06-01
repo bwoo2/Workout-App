@@ -1,35 +1,32 @@
 import React, { useState, useEffect } from 'react';
+import '../style/styles.css'
 
-const Exercises = () => {
+const ExerciseList = () => {
     const [exercises, setExercises] = useState([]);
-    const [search] = useState('');
     const [loading, setLoading] = useState(true);
-    const [currentPart, setCurrentPart] = useState('Example Exercises');
-    const body_parts = ["Abdominals",
-                        "Abductors",
-                        "Adductors",
-                        "Biceps",
-                        "Calves",
-                        "Chest",
-                        "Forearms",
-                        "Glutes",
-                        "Hamstrings",
-                        "Lats",
-                        "Lower_back",
-                        "Middle_back",
-                        "Neck",
-                        "Quadriceps",
-                        "Traps",
+    const [currentPart, setCurrentPart] = useState('Abdominals');
+    const body_parts = ["Abdominals", 
+                        "Abductors", 
+                        "Adductors", 
+                        "Biceps", 
+                        "Calves", 
+                        "Chest", 
+                        "Forearms", 
+                        "Glutes", 
+                        "Hamstrings", 
+                        "Lats", 
+                        "Lower_back", 
+                        "Middle_back", 
+                        "Neck", 
+                        "Quadriceps", 
+                        "Traps", 
                         "Triceps"]
 
     const handleBodyPart = (muscle) => {
         setLoading(true);
         setCurrentPart(muscle);
-        fetch(`https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`, {
-            headers: {
-                'X-Api-Key': process.env.REACT_APP_EXERCISES_API_KEY
-            }
-        }).then(response => {
+        fetch(`/api/exercise/${muscle.toLowerCase()}`)
+        .then(response => {
             if (!response.ok) {
                 throw new Error(response.status + ': ' + response.statusText);
             }
@@ -45,11 +42,8 @@ const Exercises = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch('https://api.api-ninjas.com/v1/exercises', {
-            headers: {
-                'X-Api-Key': process.env.REACT_APP_EXERCISES_API_KEY
-            }
-        }).then(response => {
+        fetch('/api/exercise')
+        .then(response => {
             if (!response.ok) {
                 throw new Error(response.status + ': ' + response.statusText);
             }
@@ -62,10 +56,6 @@ const Exercises = () => {
             setLoading(false);
         });
     }, []);
-
-    const filteredExercises = exercises.filter(exercise => {
-        return exercise.name.toLowerCase().includes(search.toLowerCase());
-    });
 
     if (loading) {
         return <div>Loading...</div>;
@@ -83,9 +73,10 @@ const Exercises = () => {
                 </div>
                 <div className='list__exercises'>
                     <h3>{currentPart}</h3>
-                    {filteredExercises.map((exercise, index) => (
+                    {exercises.map((exercise, index) => (
                         <div key={index}>
-                            <p><strong>{exercise.name}</strong> - <i>{exercise.difficulty}</i> ({exercise.type}) <br /> <strong>Instructions:</strong> {exercise.instructions}</p>
+                            <h2>{exercise.name}</h2>
+                            <p>{exercise.instructions}</p>
                         </div>
                     ))}
                 </div>
@@ -94,4 +85,5 @@ const Exercises = () => {
     );
 };
 
-export default Exercises;
+export default ExerciseList;
+
