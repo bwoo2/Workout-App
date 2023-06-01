@@ -10,12 +10,18 @@ const CalorieCounter = () => {
     const [activityLevel, setActivityLevel] = useState('');
 
     const fetchData = () => {
-        fetch(`https://fitness-calculator.p.rapidapi.com/dailycalorie?age=${age}&gender=${gender}&height=${height}&weight=${weight}&activitylevel=${activityLevel}`, {
-            method: 'GET',
+        fetch('/api/calorie_intake', {
+            method: 'POST',
             headers: {
-                'X-RapidAPI-Key': process.env.REACT_APP_CALORIE_API_KEY,
-                'X-RapidAPI-Host': 'fitness-calculator.p.rapidapi.com',
+                'Content-Type': 'application/json',
             },
+            body: JSON.stringify({
+                age: age,
+                gender: gender,
+                height: height,
+                weight: weight,
+                activityLevel: activityLevel,
+            }),
         }).then(response => {
             if (!response.ok) {
                 throw new Error(response.status + ': ' + response.statusText);
