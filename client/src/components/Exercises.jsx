@@ -62,8 +62,8 @@ const ExerciseList = () => {
     }
 
     return (
-        <div className='no-scroll'>
-            <h1>Exercises</h1>
+        <div className='no-scroll exercise__container'>
+            <h1 className='exercise__title'>Exercises</h1>
             <div className='exercise-content'>
                 <div className='side__bar'>
                     <h3>Body Parts</h3>
@@ -74,9 +74,9 @@ const ExerciseList = () => {
                 <div className='list__exercises'>
                     <h3>{currentPart}</h3>
                     {exercises.map((exercise, index) => (
-                        <div key={index}>
-                            <h2>{exercise.name}</h2>
-                            <p>{exercise.instructions}</p>
+                        <div key={index}  >
+                            <h2 className='exercises'>{exercise.name}</h2>
+                            <p className='exercises'>{exercise.instructions}</p>
                         </div>
                     ))}
                 </div>

@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import LOGO from '../images/dumbell.png'
 import '../style/styles.css'
 
 const Nav = ({ path }) => {
@@ -7,15 +8,21 @@ const Nav = ({ path }) => {
 
   return (
     <nav className="nav__container">
-      <button className="button" onClick={() => navigate('/')}>Home</button>
+      <div className="nav__left">
+        <button className="fitme__button gradient-text" onClick={() => navigate('/')}><img src={LOGO} alt="logo" className='nav__logo'/>FitMe</button>
+      </div>
       
       {!excludedPaths.includes(path) && (
         <>
-            <button className="button" onClick={() => navigate('/exercises')}>Exercises</button>
-            <button className="button" onClick={() => navigate('/calorie')}>Calorie</button>
-            <button className="button" onClick={() => navigate('/recipes')}>Recipes</button>
-            <button className="button" onClick={() => navigate('/login')}>Sign in</button>
-            <button className="button__signup" onClick={() => navigate('/sign_up')}>Sign up</button>
+            <div className="nav__center">
+                <button className="button" onClick={() => navigate('/calorie')}>Calorie</button>
+                <button className="button" onClick={() => navigate('/exercises')}>Exercises</button>
+                <button className="button" onClick={() => navigate('/recipes')}>Recipes</button>
+            </div>
+            <div className="nav__right">
+                <button className="button" onClick={() => navigate('/login')}>Sign in</button>
+                <button className="button__signup" onClick={() => navigate('/sign_up')}>Sign up</button>
+            </div>
         </>
       )}
     </nav>

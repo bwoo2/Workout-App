@@ -38,6 +38,10 @@ const CalorieCounter = () => {
         });
     }
 
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <div>
             <h1>Calorie Counter</h1>

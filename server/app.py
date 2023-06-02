@@ -1,7 +1,38 @@
 from flask import Flask, jsonify, abort, request
+# from flask_bcrypt import Bcrypt
+# from flask_sqlalchemy import SQLAlchemy
+# from sqlalchemy import exc
 import requests
 
 app = Flask(__name__)
+
+# !!! SQLALCHEMY is not connected yet
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://username:password@localhost/dbname'
+# db = SQLAlchemy(app)
+# bcrypt = Bcrypt(app)
+
+# class User(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     username = db.Column(db.String(120), unique=True, nullable=False)
+#     password = db.Column(db.String(60), nullable=False)
+
+#     def __repr__(self):
+#         return f"User('{self.username}')"
+    
+# db.create_all()
+
+# @app.route('/api/signup', methods=['POST'])
+# def signup():
+#     data = request.get_json()
+#     hashed_password = bcrypt.generate_password_hash(data['password']).decode('utf-8')
+#     user = User(username=data['username'], password=hashed_password)
+#     db.session.add(user)
+#     try:
+#         db.session.commit()
+#         return jsonify({'message': 'Account created successfully'}), 201
+#     except exc.IntegrityError:
+#         db.session.rollback()
+#         return jsonify({'message': 'Username already exists.'}), 400
 
 @app.route('/api/exercise', methods=['GET'])
 def api_exercise_default():

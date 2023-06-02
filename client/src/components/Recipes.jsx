@@ -66,7 +66,7 @@ const Recipe = () => {
     }
 
     return (
-        <div>
+        <div className='white'>
             <h1>Recipe Information</h1>
             
             <h3>Search for recipes</h3>

@@ -28,7 +28,7 @@ const Login = () => {
                             <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
                         </div>
                     </div>
-                    <button class="sign">Sign in</button>
+                    <button class="sign gradient-bar">Sign in</button>
                 </form>
                 <div class="social-message">
                     <div class="line"></div>
