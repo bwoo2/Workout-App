@@ -7,6 +7,32 @@ body {
     height: 100%;
 }
 
+#loader {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+
+    #down {
+        display: none;
+    } 
+
+    #up {
+        fill: gold;
+    }
+
+    .border {
+        fill: none;
+        stroke: #ff4545;
+        stroke-width: 8px;
+        stroke-dasharray: 80 10;
+    }
+
+    .circle {
+        fill: #ff4545;
+    }
+}
+
 /* ========================== NAVBAR ========================== */
 
 .nav__container {
@@ -21,6 +47,7 @@ body {
 }
 
 .nav__left {
+    width: 25%;
     display: flex;
     align-items: center;
     padding-left: 1%;
@@ -30,26 +57,17 @@ body {
     display: flex;
     justify-content: center;
     width: 50%;
-    padding-left: 2%;
 }
 
 .nav__right {
+    width: 25%;
     display: flex;
     justify-content: flex-end;
-    padding-right: 1%;
-}
-
-.fitme__button {
-    background: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-    height: 50px;
-    font-size: 20pt;
+    padding-right: 2%;
 }
 
 .gradient-text {
-    background-image: linear-gradient(45deg, #e0aa3e, #faf393);
+    background-image: linear-gradient(150deg, #e0aa3e, #faf393);
     background-size: 100%;
     background-repeat: repeat;
     -webkit-background-clip: text;
@@ -60,8 +78,18 @@ body {
     color: transparent;
 }
 
+.fitme__button {
+    border: none;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    font-size: 20pt;
+    font-family: 'Ubuntu', sans-serif;
+}
 
 .button {
+    --primary-color: black;
+    --hovered-color: gold;
     background: transparent;
     border: none;
     color: black;
@@ -69,16 +97,102 @@ body {
     height: 50px;
     font-size: 12pt;
     margin-top: .15%;
+    transition: color 0.2s ease;
+}
+
+.button:hover {
+    color: var(--hovered-color);
+}
+
+.button__signin {
+    padding: 0;
+    margin-right: 3%;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    --primary-color: black;
+    --hovered-color: gold;
+    position: relative;
+    display: flex;
+    font-size: 12pt;
+    gap: 0.5rem;
+    align-items: center;
+    color: var(--primary-color);
+    transition: color 0.2s ease;
+}
+
+.button__signin:hover {
+    color: var(--hovered-color);
+}
+
+.button__signin::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -4px;
+    background: var(--primary-color);
+    height: 2px;
+    transition: 0.3s ease-out;
+}
+
+.button__signin:hover::after {
+    width: 100%;
+    background: var(--hovered-color);
 }
 
 .button__signup {
-    background: transparent;
-    /* border: 1px solid black; */
-    border-radius: 10px;
-    color: black;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
     cursor: pointer;
+
+    --primary-color: black;
+    --hovered-color: gold;
+    position: relative;
+    display: flex;
     font-size: 12pt;
+    gap: 0.5rem;
+    align-items: center;
+    color: var(--primary-color);
+    transition: color 0.2s ease;
 }
+
+.button__signup:hover {
+    color: var(--hovered-color);
+}
+
+.button__signup::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -4px;
+    background: var(--primary-color);
+    height: 2px;
+    transition: 0.3s ease-out;
+}
+
+.button__signup:hover::after {
+    width: 100%;
+    background: var(--hovered-color);
+}
+
+.button__signup svg {
+    color: var(--primary-color);
+    transition: 0.2s;
+    position: relative;
+    width: 15px;
+    transition-delay: 0.2s;
+}
+
+.button__signup:hover svg {
+    transform: translateX(2px);
+    color: var(--hovered-color);
+}
+
 
 .nav__logo {
     width: 20px;

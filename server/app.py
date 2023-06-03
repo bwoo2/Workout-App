@@ -1,38 +1,30 @@
 from flask import Flask, jsonify, abort, request
-# from flask_bcrypt import Bcrypt
-# from flask_sqlalchemy import SQLAlchemy
-# from sqlalchemy import exc
+from flask_sqlalchemy import SQLAlchemy
+from werkzeug.security import generate_password_hash, check_password_hash
 import requests
 
 app = Flask(__name__)
 
-# !!! SQLALCHEMY is not connected yet
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://username:password@localhost/dbname'
-# db = SQLAlchemy(app)
-# bcrypt = Bcrypt(app)
+app.config['SECRET_KEY'] = 'FitMeKEY'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///FitMe.db'
+db = SQLAlchemy(app) 
 
-# class User(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     username = db.Column(db.String(120), unique=True, nullable=False)
-#     password = db.Column(db.String(60), nullable=False)
+class Test(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), unique=True, nullable=False)
 
-#     def __repr__(self):
-#         return f"User('{self.username}')"
-    
-# db.create_all()
 
-# @app.route('/api/signup', methods=['POST'])
-# def signup():
-#     data = request.get_json()
-#     hashed_password = bcrypt.generate_password_hash(data['password']).decode('utf-8')
-#     user = User(username=data['username'], password=hashed_password)
-#     db.session.add(user)
-#     try:
-#         db.session.commit()
-#         return jsonify({'message': 'Account created successfully'}), 201
-#     except exc.IntegrityError:
-#         db.session.rollback()
-#         return jsonify({'message': 'Username already exists.'}), 400
+@app.route('/api/db_test', methods=['GET'])
+def db_test():
+    test = Test(name='Test Entry')
+    db.session.add(test)
+    db.session.commit()
+
+    test_entry = Test.query.filter_by(name='Test Entry').first()
+    if test_entry:
+        return jsonify({"message": f"Database is working correctly. Found entry: {test_entry.name}"})
+    else:
+        return jsonify({"message": "There seems to be an issue with the database."}), 500
 
 @app.route('/api/exercise', methods=['GET'])
 def api_exercise_default():
@@ -112,5 +104,11 @@ def recipes():
     else:
         return abort(response.status_code, response.text)
 
+
+def create_tables():
+    with app.app_context():
+        db.create_all()
+
 if __name__ == '__main__':
+    create_tables()
     app.run(debug=True, host='0.0.0.0')
