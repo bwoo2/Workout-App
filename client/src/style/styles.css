@@ -1,5 +1,6 @@
 body {
-    background-color: black;
+    background-color: white;
+    overflow-x: hidden;
 }
 
 .no-scroll {
@@ -33,332 +34,6 @@ body {
     }
 }
 
-/* ========================== NAVBAR ========================== */
-
-.nav__container {
-    background-color: #ff4545;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5%;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0%;
-}
-
-.nav__left {
-    width: 25%;
-    display: flex;
-    align-items: center;
-    padding-left: 1%;
-}
-
-.nav__center {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-}
-
-.nav__right {
-    width: 25%;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 2%;
-}
-
-.gradient-text {
-    background-image: linear-gradient(150deg, #e0aa3e, #faf393);
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
-    color: transparent;
-}
-
-.fitme__button {
-    border: none;
-    color: white;
-    cursor: pointer;
-    height: 50px;
-    font-size: 20pt;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.button {
-    --primary-color: black;
-    --hovered-color: gold;
-    background: transparent;
-    border: none;
-    color: black;
-    cursor: pointer;
-    height: 50px;
-    font-size: 12pt;
-    margin-top: .15%;
-    transition: color 0.2s ease;
-}
-
-.button:hover {
-    color: var(--hovered-color);
-}
-
-.button__signin {
-    padding: 0;
-    margin-right: 3%;
-    border: none;
-    background: none;
-    cursor: pointer;
-
-    --primary-color: black;
-    --hovered-color: gold;
-    position: relative;
-    display: flex;
-    font-size: 12pt;
-    gap: 0.5rem;
-    align-items: center;
-    color: var(--primary-color);
-    transition: color 0.2s ease;
-}
-
-.button__signin:hover {
-    color: var(--hovered-color);
-}
-
-.button__signin::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    left: 0;
-    bottom: -4px;
-    background: var(--primary-color);
-    height: 2px;
-    transition: 0.3s ease-out;
-}
-
-.button__signin:hover::after {
-    width: 100%;
-    background: var(--hovered-color);
-}
-
-.button__signup {
-    padding: 0;
-    margin: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
-
-    --primary-color: black;
-    --hovered-color: gold;
-    position: relative;
-    display: flex;
-    font-size: 12pt;
-    gap: 0.5rem;
-    align-items: center;
-    color: var(--primary-color);
-    transition: color 0.2s ease;
-}
-
-.button__signup:hover {
-    color: var(--hovered-color);
-}
-
-.button__signup::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    left: 0;
-    bottom: -4px;
-    background: var(--primary-color);
-    height: 2px;
-    transition: 0.3s ease-out;
-}
-
-.button__signup:hover::after {
-    width: 100%;
-    background: var(--hovered-color);
-}
-
-.button__signup svg {
-    color: var(--primary-color);
-    transition: 0.2s;
-    position: relative;
-    width: 15px;
-    transition-delay: 0.2s;
-}
-
-.button__signup:hover svg {
-    transform: translateX(2px);
-    color: var(--hovered-color);
-}
-
-
-.nav__logo {
-    width: 20px;
-    height: auto;
-    margin-right: 0.15rem;
-}
-
-/* ========================== HOME ========================== */
-
-.home__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 110vh;
-    text-align: left;
-}
-
-.man__deadlift {
-    width: 1000px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-}
-
-.introduction {
-    color: white;
-    width: 1000px;
-    max-width: 100%;
-    font-size: 24pt;
-}
-
-/* ========================== SIGN UP ========================== */
-
-.login {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding-top: 175px;
-}
-
-.form-container {
-    width: 350px;
-    border-radius: 0.75rem;
-    background-color: black;
-    border: 1px solid gold;
-    padding: 2rem;
-    color: rgba(243, 244, 246, 1);
-}
-  
-.title {
-    text-align: center;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 700;
-}
-  
-.form {
-    margin-top: 1.5rem;
-}
-  
-.input-group {
-    margin-top: 0.25rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-}
-  
-.input-group label {
-    display: block;
-    color: rgba(156, 163, 175, 1);
-    margin-bottom: 4px;
-}
-
-.input-group input {
-    width: 90%;
-    border-radius: 0.375rem;
-    border: 1px solid #2d2d2d;
-    outline: 0;
-    background-color: #212121;
-    padding: 0.75rem 1rem;
-    color: rgba(243, 244, 246, 1);
-}
-  
-.input-group input:focus {
-    border-color: gold;
-}
-
-.forgot {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    color: rgba(156, 163, 175,1);
-    margin: 8px 0 14px 0;
-}
-  
-.forgot a,.signup a {
-    color: rgba(243, 244, 246, 1);
-    text-decoration: none;
-    font-size: 14px;
-}
-  
-.forgot a:hover, .signup a:hover {
-    text-decoration: underline gold;
-}
-
-.sign {
-    display: block;
-    width: 100%;
-    background-image: linear-gradient(45deg, #e0aa3e, #faf393);
-    padding: 0.75rem;
-    text-align: center;
-    color: rgba(17, 24, 39, 1);
-    border: none;
-    border-radius: 0.375rem;
-    font-weight: 600;
-    margin-top: 1rem;
-}
-  
-.social-message {
-    display: flex;
-    align-items: center;
-    padding-top: 1rem;
-}
-  
-.line {
-    height: 1px;
-    flex: 1 1 0%;
-    background-color: rgba(55, 65, 81, 1);
-}
-  
-.social-message .message {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    color: rgba(156, 163, 175, 1);
-}
-  
-.social-icons {
-    display: flex;
-    justify-content: center;
-}
-  
-.social-icons .icon {
-    border-radius: 0.125rem;
-    padding: 0.75rem;
-    border: none;
-    background-color: transparent;
-    margin-left: 8px;
-}
-  
-.social-icons .icon svg {
-    height: 1.25rem;
-    width: 1.25rem;
-    fill: #fff;
-}
-  
-.signup {
-    text-align: center;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    color: rgba(156, 163, 175, 1);
-}
-
 /* ========================== EXERCISES ========================== */
 
 .exercise__container {
@@ -366,7 +41,6 @@ body {
 }
 
 .exercise__title {
-    color: white;
     margin-left: 6%;
 }
 
@@ -380,7 +54,6 @@ body {
     border-right: 1px solid #ff4545;
     height: 80vh;
     overflow-y: auto;
-    color: white;
 }
 
 .body__part {
@@ -389,7 +62,6 @@ body {
     background: transparent;
     border: none;
     font-size: 12pt;
-    color: white;
 }
 
 .list__exercises {
@@ -397,24 +69,4 @@ body {
     padding: 10px;
     height: 80vh;
     overflow-y: auto;
-    color: white;
-}
-
-.exercises {
-    color: white;
-}
-
-/* ========================== RECIPES ========================== */
-
-.food__image {
-    display: block;
-    margin: auto;
-}
-
-.answer {
-    text-align: center;
-}
-
-.white {
-    color: white;
 }

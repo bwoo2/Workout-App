@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import LOGO from '../images/dumbell.png'
-import '../style/styles.css'
+import '../style/nav.css';
 
 const Nav = ({ path }) => {
   const navigate = useNavigate();
@@ -10,7 +10,7 @@ const Nav = ({ path }) => {
     <nav className="nav__container">
       <div className="nav__left">
         <button className="fitme__button gradient-text" onClick={() => navigate('/')}>
-          <img src={LOGO} alt="logo" className='nav__logo'/>
+          <img src={LOGO} alt="logo" className='logo'/>
           FitMe
         </button>
       </div>
@@ -18,11 +18,14 @@ const Nav = ({ path }) => {
       {!excludedPaths.includes(path) && (
         <>
           <div className="nav__center">
-              <button className="button" onClick={() => navigate('/exercises')}>Exercises</button>
-              <button className="button" onClick={() => navigate('/workouts')}>Workouts</button>
-              <button className="button" onClick={() => navigate('/calorie')}>Calorie</button>
-              <button className="button" onClick={() => navigate('/recipes')}>Recipes</button>
-              <button className="button" onClick={() => navigate('/trainers')}>Trainers</button>
+            <button className="button" onClick={() => navigate('/about')}>About</button>
+            <button className="button" onClick={() => navigate('/blog')}>Blogs</button>
+            <button className="button" onClick={() => navigate('/exercises')}>Exercises</button>
+            <button className="button" onClick={() => navigate('/trainers')}>Trainers</button>
+            <button className="button" onClick={() => navigate('/gallery')}>Gallery</button>
+            <button className="button" onClick={() => navigate('/pricing')}>Pricing</button>
+            <button className="button" onClick={() => navigate('/classes')}>Classes</button>
+            <button className="button" onClick={() => navigate('/contact')}>Contact</button>
           </div>
           <div className="nav__right">
               <button className="button__signin" onClick={() => navigate('/login')}>Sign in</button>
