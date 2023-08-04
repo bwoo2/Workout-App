@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import DEADLIFT from '../images/deadlift.webp';
-import Progress from '../images/Progress.png';
-import Workout from '../images/Workout.png';
-import CheckList from '../images/CheckList.png';
-import ChrisEvans from '../images/Chris_Evans-transformed.png';
-import RDJ from '../images/RDJ.jpeg';
-import TheRock from '../images/The_Rock-transformed.png';
-import TaraStiles from '../images/Tara_Stiles-transformed.png';
-import KristenMcGee from '../images/Kristin_McGee-transformed.png';
-import WomanWorkingOut from '../images/woman working out.avif';
-import Trainers from '../images/Trainers.png';
-import GymEquipment from '../images/ModernEquipment.png';
-import FancyGyms from '../images/FancyGyms.png';
+
+import DEADLIFT from '../images/home_page/deadlift.webp';
+import Progress from '../images/home_page/Progress.png';
+import Workout from '../images/home_page/Workout.png';
+import CheckList from '../images/home_page/CheckList.png';
+import WomanWorkingOut from '../images/home_page/woman working out.avif';
+import Trainers from '../images/home_page/Trainers.png';
+import GymEquipment from '../images/home_page/ModernEquipment.png';
+import FancyGyms from '../images/home_page/FancyGyms.png';
+
+import ChrisEvans from '../images/testimonials/Chris_Evans-transformed.png';
+import RDJ from '../images/testimonials/RDJ.jpeg';
+
+import TheRock from '../images/trainers/The_Rock-transformed.png';
+import TaraStiles from '../images/trainers/Tara_Stiles-transformed.png';
+import KristenMcGee from '../images/trainers/Kristin_McGee-transformed.png';
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -189,7 +193,7 @@ const Home = () => {
                             <div className='box_trainers'>
                                 <img src={TheRock} alt="deadlift" className='trainer_image' />
                                 <h2 className='h2_name'>Dwayne Johnson</h2>
-                                <p className='p_desc'>Power Lifter</p>
+                                <p className='p_desc'>Weight Lifter</p>
                                 <a href="https://www.facebook.com/vikram.paul.mon.007" class="icon-button facebook"><i class="fab fa-facebook"></i><span></span></a>
                                 <a href="https://twitter.com/worldofvicky007" class="icon-button twitter"><i class="fab fa-twitter"></i><span></span></a>
                                 <a href="https://www.instagram.com/worldofvicky007/" class="icon-button instagram"><i class="fab fa-instagram"></i><span></span></a>
@@ -200,6 +204,16 @@ const Home = () => {
                                 <img src={TaraStiles} alt="deadlift" className='trainer_image' />
                                 <h2 className='h2_name'>Tara Stiles</h2>
                                 <p className='p_desc'>Yoga</p>
+                                <a href="https://www.facebook.com/vikram.paul.mon.007" class="icon-button facebook"><i class="fab fa-facebook"></i><span></span></a>
+                                <a href="https://twitter.com/worldofvicky007" class="icon-button twitter"><i class="fab fa-twitter"></i><span></span></a>
+                                <a href="https://www.instagram.com/worldofvicky007/" class="icon-button instagram"><i class="fab fa-instagram"></i><span></span></a>
+                                <hr />
+                            </div>
+
+                            <div className='box_trainers'>
+                                <img src={TheRock} alt="deadlift" className='trainer_image' />
+                                <h2 className='h2_name'>Usain Bolt</h2>
+                                <p className='p_desc'>Running</p>
                                 <a href="https://www.facebook.com/vikram.paul.mon.007" class="icon-button facebook"><i class="fab fa-facebook"></i><span></span></a>
                                 <a href="https://twitter.com/worldofvicky007" class="icon-button twitter"><i class="fab fa-twitter"></i><span></span></a>
                                 <a href="https://www.instagram.com/worldofvicky007/" class="icon-button instagram"><i class="fab fa-instagram"></i><span></span></a>

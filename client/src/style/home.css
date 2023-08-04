@@ -133,15 +133,16 @@
 }
 
 .box_container_trainers {
-    margin-top: 3%;
     display: flex;
-    justify-content: center;
-    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjusts space distribution between the trainer boxes */
     width: 100%;
 }
 
 .box_trainers {
+    flex: 0 0 23%; /* 23% leaves some room for margins. Adjust this percentage as needed */
     text-align: center;
+    margin-bottom: 2%; /* Add vertical margin to separate the rows of boxes */
 }
 
 .box_trainers hr {
@@ -389,7 +390,7 @@
 .need_a_trainer {
     height: 180px;
     background-color: black;
-    background-image: url('../images/Woman\ Running.jpeg');
+    background-image: url('../images/home_page/Woman\ Running.jpeg');
     background-size: 600px;
     background-position: right;
     background-repeat: no-repeat;

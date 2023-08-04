@@ -1,5 +1,5 @@
 import React from 'react';
-import LOGO from '../images/dumbell.png'
+import LOGO from '../images/home_page/dumbell.png'
 import '../style/footer.css'
 
 const Footer = () => {
@@ -28,12 +28,18 @@ const Footer = () => {
                             
                         </div>
 
-                        <div className='footer_box'>
+                        <div className='footer_box_2'>
                             <h3>Our Classes</h3>
                             <hr />
+                            <a href="">Pilates Class</a><br />
+                            <a href="">Yoga Class</a><br />
+                            <a href="">Running Class</a><br />
+                            <a href="">HIIT Class</a><br />
+                            <a href="">Cycling Class</a><br />
+                            <a href="">Weight Lifting Class</a>
                         </div>
                             
-                        <div className='footer_box'>
+                        <div className='footer_box_2'>
                             <h3>Working Hours</h3>
                             <hr />
                             <p><b>Monday - Saturday:</b></p>

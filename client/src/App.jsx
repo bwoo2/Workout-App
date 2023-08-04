@@ -12,6 +12,7 @@ import Classes from './components/Classes';
 import Contact from './components/Contact';
 import Gallery from './components/Gallery';
 import Exercises from './components/Exercises';
+import TrainersPage from './components/TrainersPage';
 import Footer from './components/Footer';
 
 const App = () => {
@@ -37,6 +38,7 @@ const AppContent = () => {
         <Route path="/trainers" element={<Trainers />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/classes" element={<Classes />} />
+        <Route path="/trainers/*" element={<TrainersPage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/sign_up" element={<Signup />} />
         <Route path="/login" element={<Login />} />

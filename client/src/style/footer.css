@@ -30,7 +30,22 @@
     text-align: left;
 }
 
-.footer_box p {
+.footer_box_2 {
+    padding: 1rem;
+    height: 250px;
+    width: 350px;
+    text-align: left;
+}
+
+.footer_box_2 a {
+	display: block;
+	line-height: 16pt;
+	text-decoration: none;
+    outline: none;
+	color: black;
+}
+
+.footer_box_2 p {
     line-height: 16pt;
 }
 

@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import LOGO from '../images/dumbell.png'
+import LOGO from '../images/home_page/dumbell.png'
 import '../style/nav.css';
 
 const Nav = ({ path }) => {
