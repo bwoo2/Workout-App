@@ -1,5 +1,17 @@
 .trainers_container {
     text-align: center;
+}  
+
+.image_head_container {
+    background-color: #0d0d0d;
+}
+
+.trainer_head {
+    width: 50%;
+}
+
+.p_desc {
+    margin-bottom: 15px;
 }
 
 .content_container_trainers {
@@ -14,7 +26,7 @@
     margin-top: 3%;
     display: flex;
     gap: 0.5rem;
-    width: 100%;
+    width: 80%;
 }
 
 .box_trainers {
@@ -29,7 +41,7 @@
 }
 
 .trainer_image {
-    width: 50%;
+    width: 60%;
     height: auto;
     border-radius: 10px;
     transition: transform .2s;
@@ -40,3 +52,15 @@
     -webkit-transform: scale(1.2);
     transform: scale(1.1);
 }
+
+.trainer-name-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .trainer-name-link:hover, .trainer-name-link:focus {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+  }
+  

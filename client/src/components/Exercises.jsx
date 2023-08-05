@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import '../style/styles.css'
+import '../style/exercise.css'
+
+import TrainerHead from '../images/trainers/Ropes.png';
 
 const ExerciseList = () => {
     const [exercises, setExercises] = useState([]);
@@ -72,6 +74,9 @@ const ExerciseList = () => {
 
     return (
         <div className='no-scroll exercise__container'>
+            <div className='image_head_container'>
+                <img src={TrainerHead} alt="" className='trainer_head'/>
+            </div>
             <h1 className='exercise__title'>Exercises</h1>
             <div className='exercise-content'>
                 <div className='side__bar'>

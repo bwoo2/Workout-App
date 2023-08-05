@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import TrainerHead from '../images/trainers/Ropes.png';
 import TheRock from '../images/trainers/The_Rock-transformed.png';
 import TaraStiles from '../images/trainers/Tara_Stiles-transformed.png';
 import KristenMcGee from '../images/trainers/Kristin_McGee-transformed.png';
@@ -95,13 +96,13 @@ export const Trainer = ({image, name, specialty, facebook, twitter, instagram}) 
       <Link to={`/trainers/${trainerName}`}>
         <img src={image} alt="" className='trainer_image' />
       </Link>
-      <Link to={`/trainers/${trainerName}`}>
+      <Link to={`/trainers/${trainerName}`} className='trainer-name-link'>
         <h2 className='h2_name'>{name}</h2>
       </Link>
       <p className='p_desc'>{specialty}</p>
-      <a href={facebook} class="icon-button facebook"><i class="fab fa-facebook"></i><span></span></a>
+      {/* <a href={facebook} class="icon-button facebook"><i class="fab fa-facebook"></i><span></span></a>
       <a href={twitter} class="icon-button twitter"><i class="fab fa-twitter"></i><span></span></a>
-      <a href={instagram} class="icon-button instagram"><i class="fab fa-instagram"></i><span></span></a>
+      <a href={instagram} class="icon-button instagram"><i class="fab fa-instagram"></i><span></span></a> */}
       <hr />
     </div>
   );
@@ -111,6 +112,9 @@ const App = () => {
 
   return (
     <div className='trainers_container'>
+      <div className='image_head_container'>
+        <img src={TrainerHead} alt="" className='trainer_head'/>
+      </div>
       <h1>Personal Trainers</h1>
       <h2>Experience the Expertise of Our Certified Fitness Trainers</h2>
       <p>Align your fitness journey with our trainers' specialties for the most effective guidance.</p>

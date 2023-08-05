@@ -34,14 +34,20 @@ body {
     }
 }
 
-/* ========================== EXERCISES ========================== */
 
-.exercise__container {
-    margin-top: 4%;
+.image_head_container {
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+.trainer_head {
+    width: 50%;
 }
 
 .exercise__title {
-    margin-left: 6%;
+    text-align: center;
 }
 
 .exercise-content {

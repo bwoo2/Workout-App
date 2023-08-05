@@ -23,8 +23,8 @@ const Nav = ({ path }) => {
             <button className="button" onClick={() => navigate('/exercises')}>Exercises</button>
             <button className="button" onClick={() => navigate('/trainers')}>Trainers</button>
             <button className="button" onClick={() => navigate('/gallery')}>Gallery</button>
-            <button className="button" onClick={() => navigate('/pricing')}>Pricing</button>
             <button className="button" onClick={() => navigate('/classes')}>Classes</button>
+            <button className="button" onClick={() => navigate('/pricing')}>Pricing</button>
             <button className="button" onClick={() => navigate('/contact')}>Contact</button>
           </div>
           <div className="nav__right">
