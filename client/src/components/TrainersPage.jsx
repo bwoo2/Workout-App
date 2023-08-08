@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Route, Routes, useParams, Link } from 'react-router-dom';
 import { Trainer } from './Trainers';
 
-import TheRock from '../images/trainers/The_Rock-transformed.png';
-import TaraStiles from '../images/trainers/Tara_Stiles-transformed.png';
-import KristenMcGee from '../images/trainers/Kristin_McGee-transformed.png';
+import TheRock from '../images/trainers/The Rock.png';
+import TaraStiles from '../images/trainers/Tara Stiles.png';
+import KristenMcGee from '../images/trainers/Kristin McGee.png';
 import ChloeTing from '../images/trainers/Chloe Ting.png';
 import UsainBolt from '../images/trainers/Usain Bolt.png';
 import MarianneVos from '../images/trainers/Marianne Vos.png';
-import AnissaMeksen from '../images/trainers/AnissaMeksen.png';
+import AnissaMeksen from '../images/trainers/Anissa Meksen.png';
 import MichaelPhelps from '../images/trainers/Michael Phelps.png';
 
 const trainers = [
@@ -102,7 +102,6 @@ const TrainerPage = () => {
                 <a href={trainer.twitter} className="icon-button twitter"><i className="fab fa-twitter"></i><span></span></a>
                 <a href={trainer.instagram} className="icon-button instagram"><i className="fab fa-instagram"></i><span></span></a>
             </div>
-            <Link to='/trainers'>Back to Trainers List</Link>
         </div>
     );
 };

@@ -10,13 +10,16 @@ import Trainers from '../images/home_page/Trainers.png';
 import GymEquipment from '../images/home_page/ModernEquipment.png';
 import FancyGyms from '../images/home_page/FancyGyms.png';
 
-import ChrisEvans from '../images/testimonials/Chris_Evans-transformed.png';
-import RDJ from '../images/testimonials/RDJ.jpeg';
+import CaptainAmerica from '../images/testimonials/Captain America.png';
+import RDJ from '../images/testimonials/RDJ.png';
+import BlackWidow from '../images/testimonials/Black Widow.png';
+import Hawkeye from '../images/testimonials/Hawkeye.png';
+import Hulk from '../images/testimonials/Hulk.png';
+import Thor from '../images/testimonials/Thor.png';
 
-import TheRock from '../images/trainers/The_Rock-transformed.png';
-import TaraStiles from '../images/trainers/Tara_Stiles-transformed.png';
-import KristenMcGee from '../images/trainers/Kristin_McGee-transformed.png';
-import UsainBolt from '../images/trainers/Usain Bolt.png'
+import TheRock from '../images/trainers/The Rock.png';
+import TaraStiles from '../images/trainers/Tara Stiles.png';
+import KristenMcGee from '../images/trainers/Kristin McGee.png';
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -35,7 +38,7 @@ const Home = () => {
 
     const testimonials = [
         {
-            image: ChrisEvans,
+            image: CaptainAmerica,
             quote: "Powerlifting is all about sheer determination, discipline, and pushing your limits - something I'm no stranger to. FitMe's structured and customized routines have helped me reach new heights in my powerlifting journey. Their focus on form and technique, while maintaining the spirit of strength, is what sets them apart.",
             name: "Steve Rogers",
             position: "The First Avenger"
@@ -45,7 +48,32 @@ const Home = () => {
             quote: "When it comes to weightlifting, it's all about precision, strategy, and technology - and that's why I chose FitMe. They incorporate the latest technology and research to optimize every lift. They've made my workouts more efficient and effective, and that's the kind of genius I can get behind.",
             name: "Tony Stark",
             position: "Genius, Billionaire, Playboy, Philanthropist"
+        },
+        {
+            image: BlackWidow,
+            quote: "MMA is not just about fighting, it's about strategy, precision, and adaptability. FitMe's MMA routines have enhanced my agility and combat skills, making every move count. Their attention to technique and training intensity matches my own commitment to excellence.",
+            name: "Natasha Romanoff",
+            position: "The Black Widow"
+        },
+        {
+            image: Hulk,
+            quote: "Yoga is about balance, not just in posture, but in mind and spirit. With FitMe, I've found a way to channel my inner strength and achieve tranquility. Their yoga routines help me find calm in the chaos, and that's essential for someone with my... temper.",
+            name: "Bruce Banner",
+            position: "The Green Giant"
+        },
+        {
+            image: Thor,
+            quote: "In weightlifting, as in battle, it's about strength, endurance, and valor. FitMe's weightlifting programs have been forged for warriors like me. Every routine feels like preparing for an epic battle, pushing my Asgardian limits.",
+            name: "Thor Odinson",
+            position: "God of Thunder"
+        },
+        {
+            image: Hawkeye,
+            quote: "HIIT is all about precision, speed, and endurance - qualities of a master archer. FitMe's HIIT routines keep me in top form, ensuring I never miss my mark. Their dynamic workouts keep me agile and ready for whatever comes my way.",
+            name: "Clint Barton",
+            position: "The Sharpshooter"
         }
+        
     ];
     
     const navigate = useNavigate();
@@ -204,16 +232,6 @@ const Home = () => {
                                 <a href="https://www.instagram.com/worldofvicky007/" class="icon-button instagram"><i class="fab fa-instagram"></i><span></span></a>
                                 <hr />
                             </div>
-
-                            <div className='box_trainers'>
-                                <img src={UsainBolt} alt="deadlift" className='trainer_image' />
-                                <h2 className='h2_name'>Usain Bolt</h2>
-                                <p className='p_desc'>Runner</p>
-                                <a href="https://www.facebook.com/vikram.paul.mon.007" class="icon-button facebook"><i class="fab fa-facebook"></i><span></span></a>
-                                <a href="https://twitter.com/worldofvicky007" class="icon-button twitter"><i class="fab fa-twitter"></i><span></span></a>
-                                <a href="https://www.instagram.com/worldofvicky007/" class="icon-button instagram"><i class="fab fa-instagram"></i><span></span></a>
-                                <hr />
-                            </div>
                         </div>       
                     </div>
                 </div>
@@ -330,23 +348,59 @@ const Home = () => {
                 <div className='home_blogs'>
                     <h2 className='h2_name'>Recent Blogs</h2>
                     <p className='p_desc'>Our recent news</p>
-                    <div className='content_container'>
-                        <div className='box_container'>
-                            <div className='box_blogs'>
-                                <h2 className='h2_name'>Fitness is for everyone</h2>
-                                <button className='purchase_button'>Read Now</button>
+                    <div class="ag-format-container">
+                        <div class="ag-courses_box">
+                            <div class="ag-courses_item">
+                                <a href="#" class="ag-courses-item_link">
+                                <div class="ag-courses-item_bg"></div>
+
+                                <div class="ag-courses-item_title">
+                                    UI/Web&amp;Graph design for teenagers 11-17&#160;years old
+                                </div>
+
+                                <div class="ag-courses-item_date-box">
+                                    Start:
+                                    <span class="ag-courses-item_date">
+                                    04.11.2022
+                                    </span>
+                                </div>
+                                </a>
                             </div>
 
-                            <div className='box_blogs'>
-                                <h2>Food &gt; Exercise</h2>
-                                <button className='purchase_button'>Read Now</button>
+                            <div class="ag-courses_item">
+                                <a href="#" class="ag-courses-item_link">
+                                <div class="ag-courses-item_bg"></div>
+
+                                <div class="ag-courses-item_title">
+                                    UX/UI Web-Design&#160;+ Mobile Design
+                                </div>
+
+                                <div class="ag-courses-item_date-box">
+                                    Start:
+                                    <span class="ag-courses-item_date">
+                                    04.11.2022
+                                    </span>
+                                </div>
+                                </a>
                             </div>
 
-                            <div className='box_blogs'>
-                                <h2>It's never too late to start!</h2>
-                                <button className='purchase_button'>Read Now</button>
+                            <div class="ag-courses_item">
+                                <a href="#" class="ag-courses-item_link">
+                                <div class="ag-courses-item_bg"></div>
+
+                                <div class="ag-courses-item_title">
+                                    Annual package "Product+UX/UI+Graph designer&#160;2022"
+                                </div>
+
+                                <div class="ag-courses-item_date-box">
+                                    Start:
+                                    <span class="ag-courses-item_date">
+                                    04.11.2022
+                                    </span>
+                                </div>
+                                </a>
                             </div>
-                        </div>       
+                        </div>
                     </div>
                 </div>
             </div>     

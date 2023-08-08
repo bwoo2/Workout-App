@@ -40,14 +40,14 @@
     border: none;
 }
 
-.trainer_image {
+.trainer_image_page {
     width: 60%;
     height: auto;
     border-radius: 10px;
     transition: transform .2s;
 }
 
-.trainer_image:hover {
+.trainer_image_page:hover {
     -ms-transform: scale(1.2);
     -webkit-transform: scale(1.2);
     transform: scale(1.1);
