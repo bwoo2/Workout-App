@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './components/Home';
 import Nav from './components/Nav';
@@ -26,6 +26,10 @@ const App = () => {
 const AppContent = () => {
   const location = useLocation();
   const showFooter = location.pathname !== '/sign_up' && location.pathname !== '/login';
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <>

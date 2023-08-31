@@ -355,13 +355,13 @@ const Home = () => {
                                 <div class="ag-courses-item_bg"></div>
 
                                 <div class="ag-courses-item_title">
-                                    UI/Web&amp;Graph design for teenagers 11-17&#160;years old
+                                    Insert Blog
                                 </div>
 
                                 <div class="ag-courses-item_date-box">
                                     Start:
                                     <span class="ag-courses-item_date">
-                                    04.11.2022
+                                    Insert Date
                                     </span>
                                 </div>
                                 </a>
@@ -372,13 +372,13 @@ const Home = () => {
                                 <div class="ag-courses-item_bg"></div>
 
                                 <div class="ag-courses-item_title">
-                                    UX/UI Web-Design&#160;+ Mobile Design
+                                    Insert Blog
                                 </div>
 
                                 <div class="ag-courses-item_date-box">
                                     Start:
                                     <span class="ag-courses-item_date">
-                                    04.11.2022
+                                    Insert Date
                                     </span>
                                 </div>
                                 </a>
@@ -389,13 +389,13 @@ const Home = () => {
                                 <div class="ag-courses-item_bg"></div>
 
                                 <div class="ag-courses-item_title">
-                                    Annual package "Product+UX/UI+Graph designer&#160;2022"
+                                    Insert Blog
                                 </div>
 
                                 <div class="ag-courses-item_date-box">
                                     Start:
                                     <span class="ag-courses-item_date">
-                                    04.11.2022
+                                    Insert Date
                                     </span>
                                 </div>
                                 </a>

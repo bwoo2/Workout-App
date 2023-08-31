@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import TrainerHead from '../images/trainers/Ropes.png';
@@ -16,9 +16,9 @@ import '../style/trainers.css';
 const trainers = [
   {
     image: KristenMcGee,
-    name: "Kristen McGee",
+    name: "Kristin McGee",
     specialty: "Pilates",
-    profile: "/trainers/KristenMcGee"
+    profile: "/trainers/KristinMcGee"
   },
   {
     image: TheRock,

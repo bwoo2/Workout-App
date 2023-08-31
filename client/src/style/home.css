@@ -364,6 +364,7 @@
 .home_blogs {
     width: 100%;
     text-align: center;
+    padding-bottom: 6%;
 }
 
 .home_pricing {
@@ -381,6 +382,7 @@
     color: white;
     padding: 3rem;
     padding-left: 15%;
+    margin-bottom: 6%;
 }
 
 .purchase_button {
