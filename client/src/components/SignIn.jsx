@@ -13,24 +13,24 @@ const Login = () => {
 
     return (
         <div className='login'>
-            <div class="form-container">
-                <p class="title">Sign in</p>
-                <form class="form">
-                    <div class="input-group">
+            <div className="form-container">
+                <p className="title">Sign in</p>
+                <form className="form">
+                    <div className="input-group">
                         <label for="username">Username</label>
                         <input type="text" name="username" id="username" placeholder="" />
                     </div>
-                    <div class="input-group">
+                    <div className="input-group">
                         <label for="password">Password</label>
                         <input type="password" name="password" id="password" placeholder="" />
-                        <div class="forgot">
+                        <div className="forgot">
                             {/* FORGOT PASSWORD IMPLEMENTATION AND REFERENCE */}
                             <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
                         </div>
                     </div>
-                    <button class="sign gradient-bar">Sign in</button>
+                    <button className="sign gradient-bar">Sign in</button>
                 </form>
-                <p class="signup">Don't have an account?
+                <p className="signup">Don't have an account?
                     <a rel="noopener noreferrer" href="/sign_up">Sign up</a>
                 </p>
             </div>

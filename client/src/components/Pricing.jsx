@@ -11,13 +11,13 @@ function Pricing() {
               <div className='box_pricing'>
                   <h2>Beginner</h2>
                   <h1>$119.99/mon</h1>
-                  <ol class="yesno">
-                      <li class="yes">Exercise List</li>
-                      <li class="yes">Join Classes</li>
-                      <li class="no">Personal Trainer</li>
-                      <li class="no">Post Blogs</li>
-                      <li class="no">Create Classes</li>
-                      <li class="no">Become a Trainer</li>
+                  <ol className="yesno">
+                      <li className="yes">Exercise List</li>
+                      <li className="yes">Join Classes</li>
+                      <li className="no">Personal Trainer</li>
+                      <li className="no">Post Blogs</li>
+                      <li className="no">Create Classes</li>
+                      <li className="no">Become a Trainer</li>
                   </ol>
                   <button className='purchase_button'>Purchase Now</button>
               </div>
@@ -25,13 +25,13 @@ function Pricing() {
               <div className='box_pricing'>
                   <h2>Advanced</h2>
                   <h1>$249.99/mon</h1>
-                  <ol class="yesno">
-                      <li class="yes">Exercise List</li>
-                      <li class="yes">Join Classes</li>
-                      <li class="yes">Personal Trainer</li>
-                      <li class="yes">Post Blogs</li>
-                      <li class="no">Create Classes</li>
-                      <li class="no">Become a Trainer</li>
+                  <ol className="yesno">
+                      <li className="yes">Exercise List</li>
+                      <li className="yes">Join Classes</li>
+                      <li className="yes">Personal Trainer</li>
+                      <li className="yes">Post Blogs</li>
+                      <li className="no">Create Classes</li>
+                      <li className="no">Become a Trainer</li>
                   </ol>
                   <button className='purchase_button'>Purchase Now</button>
               </div>
@@ -39,13 +39,13 @@ function Pricing() {
               <div className='box_pricing'>
                   <h2>Professional</h2>
                   <h1>$399.99/mon</h1>
-                  <ol class="yesno">
-                      <li class="yes">Exercise List</li>
-                      <li class="yes">Join Classes</li>
-                      <li class="yes">Personal Trainer</li>
-                      <li class="yes">Post Blogs</li>
-                      <li class="yes">Create Classes</li>
-                      <li class="yes">Become a Trainer</li>
+                  <ol className="yesno">
+                      <li className="yes">Exercise List</li>
+                      <li className="yes">Join Classes</li>
+                      <li className="yes">Personal Trainer</li>
+                      <li className="yes">Post Blogs</li>
+                      <li className="yes">Create Classes</li>
+                      <li className="yes">Become a Trainer</li>
                   </ol>
                   <button className='purchase_button'>Purchase Now</button>
               </div>

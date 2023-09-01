@@ -206,10 +206,10 @@ const Home = () => {
                                 <img src={KristenMcGee} alt="" className='trainer_image' />
                                 <h2 className='h2_name'>Kristen McGee</h2>
                                 <p className='p_desc'>Pilates</p>
-                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-                                <a href="https://www.facebook.com/vikram.paul.mon.007" class="icon-button facebook"><i class="fab fa-facebook"></i><span></span></a>
-                                <a href="https://twitter.com/worldofvicky007" class="icon-button twitter"><i class="fab fa-twitter"></i><span></span></a>
-                                <a href="https://www.instagram.com/worldofvicky007/" class="icon-button instagram"><i class="fab fa-instagram"></i><span></span></a>
+                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
+                                <a href="https://www.facebook.com/vikram.paul.mon.007" className="icon-button facebook"><i className="fab fa-facebook"></i><span></span></a>
+                                <a href="https://twitter.com/worldofvicky007" className="icon-button twitter"><i className="fab fa-twitter"></i><span></span></a>
+                                <a href="https://www.instagram.com/worldofvicky007/" className="icon-button instagram"><i className="fab fa-instagram"></i><span></span></a>
                                 <hr />
                             </div>
 
@@ -217,9 +217,9 @@ const Home = () => {
                                 <img src={TheRock} alt="" className='trainer_image' />
                                 <h2 className='h2_name'>Dwayne Johnson</h2>
                                 <p className='p_desc'>Weight Lifter</p>
-                                <a href="https://www.facebook.com/vikram.paul.mon.007" class="icon-button facebook"><i class="fab fa-facebook"></i><span></span></a>
-                                <a href="https://twitter.com/worldofvicky007" class="icon-button twitter"><i class="fab fa-twitter"></i><span></span></a>
-                                <a href="https://www.instagram.com/worldofvicky007/" class="icon-button instagram"><i class="fab fa-instagram"></i><span></span></a>
+                                <a href="https://www.facebook.com/vikram.paul.mon.007" className="icon-button facebook"><i className="fab fa-facebook"></i><span></span></a>
+                                <a href="https://twitter.com/worldofvicky007" className="icon-button twitter"><i className="fab fa-twitter"></i><span></span></a>
+                                <a href="https://www.instagram.com/worldofvicky007/" className="icon-button instagram"><i className="fab fa-instagram"></i><span></span></a>
                                 <hr />
                             </div>
                                 
@@ -227,9 +227,9 @@ const Home = () => {
                                 <img src={TaraStiles} alt="" className='trainer_image' />
                                 <h2 className='h2_name'>Tara Stiles</h2>
                                 <p className='p_desc'>Yoga</p>
-                                <a href="https://www.facebook.com/vikram.paul.mon.007" class="icon-button facebook"><i class="fab fa-facebook"></i><span></span></a>
-                                <a href="https://twitter.com/worldofvicky007" class="icon-button twitter"><i class="fab fa-twitter"></i><span></span></a>
-                                <a href="https://www.instagram.com/worldofvicky007/" class="icon-button instagram"><i class="fab fa-instagram"></i><span></span></a>
+                                <a href="https://www.facebook.com/vikram.paul.mon.007" className="icon-button facebook"><i className="fab fa-facebook"></i><span></span></a>
+                                <a href="https://twitter.com/worldofvicky007" className="icon-button twitter"><i className="fab fa-twitter"></i><span></span></a>
+                                <a href="https://www.instagram.com/worldofvicky007/" className="icon-button instagram"><i className="fab fa-instagram"></i><span></span></a>
                                 <hr />
                             </div>
                         </div>       
@@ -303,13 +303,13 @@ const Home = () => {
                             <div className='box_pricing'>
                                 <h2>Beginner</h2>
                                 <h1>$119.99/mon</h1>
-                                <ol class="yesno">
-                                    <li class="yes">Exercise List</li>
-                                    <li class="yes">Join Classes</li>
-                                    <li class="no">Personal Trainer</li>
-                                    <li class="no">Post Blogs</li>
-                                    <li class="no">Create Classes</li>
-                                    <li class="no">Become a Trainer</li>
+                                <ol className="yesno">
+                                    <li className="yes">Exercise List</li>
+                                    <li className="yes">Join Classes</li>
+                                    <li className="no">Personal Trainer</li>
+                                    <li className="no">Post Blogs</li>
+                                    <li className="no">Create Classes</li>
+                                    <li className="no">Become a Trainer</li>
                                 </ol>
                                 <button className='purchase_button'>Purchase Now</button>
                             </div>
@@ -317,13 +317,13 @@ const Home = () => {
                             <div className='box_pricing'>
                                 <h2>Advanced</h2>
                                 <h1>$249.99/mon</h1>
-                                <ol class="yesno">
-                                    <li class="yes">Exercise List</li>
-                                    <li class="yes">Join Classes</li>
-                                    <li class="yes">Personal Trainer</li>
-                                    <li class="yes">Post Blogs</li>
-                                    <li class="no">Create Classes</li>
-                                    <li class="no">Become a Trainer</li>
+                                <ol className="yesno">
+                                    <li className="yes">Exercise List</li>
+                                    <li className="yes">Join Classes</li>
+                                    <li className="yes">Personal Trainer</li>
+                                    <li className="yes">Post Blogs</li>
+                                    <li className="no">Create Classes</li>
+                                    <li className="no">Become a Trainer</li>
                                 </ol>
                                 <button className='purchase_button'>Purchase Now</button>
                             </div>
@@ -331,13 +331,13 @@ const Home = () => {
                             <div className='box_pricing'>
                                 <h2>Professional</h2>
                                 <h1>$399.99/mon</h1>
-                                <ol class="yesno">
-                                    <li class="yes">Exercise List</li>
-                                    <li class="yes">Join Classes</li>
-                                    <li class="yes">Personal Trainer</li>
-                                    <li class="yes">Post Blogs</li>
-                                    <li class="yes">Create Classes</li>
-                                    <li class="yes">Become a Trainer</li>
+                                <ol className="yesno">
+                                    <li className="yes">Exercise List</li>
+                                    <li className="yes">Join Classes</li>
+                                    <li className="yes">Personal Trainer</li>
+                                    <li className="yes">Post Blogs</li>
+                                    <li className="yes">Create Classes</li>
+                                    <li className="yes">Become a Trainer</li>
                                 </ol>
                                 <button className='purchase_button'>Purchase Now</button>
                             </div>
@@ -348,53 +348,53 @@ const Home = () => {
                 <div className='home_blogs'>
                     <h2 className='h2_name'>Recent Blogs</h2>
                     <p className='p_desc'>Our recent news</p>
-                    <div class="ag-format-container">
-                        <div class="ag-courses_box">
-                            <div class="ag-courses_item">
-                                <a href="#" class="ag-courses-item_link">
-                                <div class="ag-courses-item_bg"></div>
+                    <div className="ag-format-container">
+                        <div className="ag-courses_box">
+                            <div className="ag-courses_item">
+                                <a href="#" className="ag-courses-item_link">
+                                <div className="ag-courses-item_bg"></div>
 
-                                <div class="ag-courses-item_title">
+                                <div className="ag-courses-item_title">
                                     Insert Blog
                                 </div>
 
-                                <div class="ag-courses-item_date-box">
+                                <div className="ag-courses-item_date-box">
                                     Start:
-                                    <span class="ag-courses-item_date">
+                                    <span className="ag-courses-item_date">
                                     Insert Date
                                     </span>
                                 </div>
                                 </a>
                             </div>
 
-                            <div class="ag-courses_item">
-                                <a href="#" class="ag-courses-item_link">
-                                <div class="ag-courses-item_bg"></div>
+                            <div className="ag-courses_item">
+                                <a href="#" className="ag-courses-item_link">
+                                <div className="ag-courses-item_bg"></div>
 
-                                <div class="ag-courses-item_title">
+                                <div className="ag-courses-item_title">
                                     Insert Blog
                                 </div>
 
-                                <div class="ag-courses-item_date-box">
+                                <div className="ag-courses-item_date-box">
                                     Start:
-                                    <span class="ag-courses-item_date">
+                                    <span className="ag-courses-item_date">
                                     Insert Date
                                     </span>
                                 </div>
                                 </a>
                             </div>
 
-                            <div class="ag-courses_item">
-                                <a href="#" class="ag-courses-item_link">
-                                <div class="ag-courses-item_bg"></div>
+                            <div className="ag-courses_item">
+                                <a href="#" className="ag-courses-item_link">
+                                <div className="ag-courses-item_bg"></div>
 
-                                <div class="ag-courses-item_title">
+                                <div className="ag-courses-item_title">
                                     Insert Blog
                                 </div>
 
-                                <div class="ag-courses-item_date-box">
+                                <div className="ag-courses-item_date-box">
                                     Start:
-                                    <span class="ag-courses-item_date">
+                                    <span className="ag-courses-item_date">
                                     Insert Date
                                     </span>
                                 </div>

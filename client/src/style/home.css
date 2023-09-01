@@ -381,8 +381,11 @@
     background-repeat: no-repeat;
     color: white;
     padding: 3rem;
-    padding-left: 15%;
-    margin-bottom: 6%;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .purchase_button {

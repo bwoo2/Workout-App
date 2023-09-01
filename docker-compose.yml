@@ -8,6 +8,8 @@ services:
     - ./server:/app
     environment:
       FLASK_ENV: development
+    env_file:
+      - ./.env.local
 
   web:
     build: ./client
@@ -17,3 +19,5 @@ services:
       - ./client:/user/src/app
     depends_on:
       - server
+    env_file:
+      - ./.env.local
