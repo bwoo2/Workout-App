@@ -25,7 +25,9 @@ const App = () => {
 
 const AppContent = () => {
   const location = useLocation();
-  const showFooter = location.pathname !== '/sign_up' && location.pathname !== '/login';
+  const showFooter = !(location.pathname === '/sign_up' ||
+                       location.pathname === '/login' ||
+                       location.pathname.startsWith('/classes/'));
 
   useEffect(() => {
     window.scrollTo(0, 0);

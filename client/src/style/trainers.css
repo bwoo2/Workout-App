@@ -23,7 +23,6 @@
 }
 
 .box_container_trainers {
-    margin-top: 3%;
     display: flex;
     gap: 0.5rem;
     width: 80%;

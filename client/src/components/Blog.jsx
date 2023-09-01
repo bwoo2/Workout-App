@@ -10,6 +10,7 @@ function Blog() {
         <img src={TrainerHead} alt="" className='trainer_head'/>
       </div>
       <h1>Blogs</h1>
+      <p>Read about our lastest news</p>
 
       <div className="ag-format-container">
         <div className="ag-courses_box">

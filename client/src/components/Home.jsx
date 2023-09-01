@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 import DEADLIFT from '../images/home_page/deadlift.webp';
 import Progress from '../images/home_page/Progress.png';
@@ -203,7 +203,9 @@ const Home = () => {
                     <div className='content_container_trainers'>
                         <div className='box_container_trainers'>
                             <div className='box_trainers'>
-                                <img src={KristenMcGee} alt="" className='trainer_image' />
+                                <Link to={`/trainers/Kristin%20McGee`}>
+                                    <img src={KristenMcGee} alt="" className='trainer_image' />
+                                </Link>
                                 <h2 className='h2_name'>Kristen McGee</h2>
                                 <p className='p_desc'>Pilates</p>
                                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
@@ -214,7 +216,9 @@ const Home = () => {
                             </div>
 
                             <div className='box_trainers'>
-                                <img src={TheRock} alt="" className='trainer_image' />
+                                <Link to={`/trainers/Dwayne%20Johnson`}>
+                                    <img src={TheRock} alt="" className='trainer_image' />
+                                </Link>
                                 <h2 className='h2_name'>Dwayne Johnson</h2>
                                 <p className='p_desc'>Weight Lifter</p>
                                 <a href="https://www.facebook.com/vikram.paul.mon.007" className="icon-button facebook"><i className="fab fa-facebook"></i><span></span></a>
@@ -223,8 +227,10 @@ const Home = () => {
                                 <hr />
                             </div>
                                 
-                            <div className='box_trainers'>
-                                <img src={TaraStiles} alt="" className='trainer_image' />
+                            <div className='box_trainers'>                               
+                                <Link to={`/trainers/Tara%20Stiles`}>
+                                    <img src={TaraStiles} alt="" className='trainer_image' />
+                                </Link>
                                 <h2 className='h2_name'>Tara Stiles</h2>
                                 <p className='p_desc'>Yoga</p>
                                 <a href="https://www.facebook.com/vikram.paul.mon.007" className="icon-button facebook"><i className="fab fa-facebook"></i><span></span></a>
